@@ -1,0 +1,137 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    font-family: 'Kalam', cursive;
+    
+}
+
+video {
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.container {
+    width: 50vh;
+    min-width: 320px;
+    padding: 16px 24px;
+    height: 60vh;
+    transition: 1s ease;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.add-task {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+
+.add_Task_input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 40vh;
+    margin: 0 1rem;
+    background: transparent;
+    /* font-family: 'Nothing You Could Do', cursive; */
+}
+
+.add-btn {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    font-size: 16px;
+    background: #ff5945;
+    color: #ffff;
+    border-radius: 40px;
+    cursor: pointer;
+    /* font-family: 'Nothing You Could Do', cursive; */
+}
+
+.list {
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 20px;
+    color: #000;
+    text-align: left;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("todo images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+    top: 11px;
+    left: -19px ;
+    opacity: 0.5;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url("todo images/checked.png");
+}
+
+ul li span {
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    border-radius: 50%;
+}
